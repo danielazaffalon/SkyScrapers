@@ -6,7 +6,7 @@
 /*   By: dazaffal <dazaffal@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 14:27:07 by dazaffal          #+#    #+#             */
-/*   Updated: 2024/04/01 16:54:56 by dazaffal         ###   ########.fr       */
+/*   Updated: 2024/04/01 18:42:53 by dazaffal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,8 @@ int	parsing(int views[][N], char *p)
 int is_valid(int board[][N], int views[][N], int position)
 {
 	int i;
-	int acc_view[4];//up, down, left, right view
-	int last_max[4];
+	int acc_view[4]; //accumulate up, down, left, right view
+	int last_max[4]; //last maximum value found for each view
 	int row;
 	int col;
 	int num;
@@ -167,7 +167,7 @@ int  solve(int board[][N], int position, int views[][N])
 		return 1;
 	row = position / N;
 	col = position % N;
-	while (num <= 4)
+	while (num <= N)
 	{
 		board[row][col] = num;
 		if (is_valid(board, views, position))
@@ -197,5 +197,5 @@ int	main(int ac,char **av)
 	if (solve(board, 0, views))
 		print_board(board);
 	else
-		write(1, "Not solved\n", 11);
+		write(1, "It can not be solved\n", 21);
 }
