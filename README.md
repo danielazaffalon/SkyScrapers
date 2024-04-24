@@ -1,4 +1,4 @@
-# rush01
+# Boxes Sort
 On a 4 by 4 map, place the squares between 1 and 4 high so that each line and column shows the correct number of squares from each viewpoint. Each line and column the correct number of squares is visible from every possible viewpoint (left/right for lines and up/down for columns). Example: the box of size 3 here hides the box of height 1, which implies that from the left only 3 boxes are visible. From the right, the box of height 4 hides the other boxes, so there is only one box visible.
 ![1.jpg](/img/1.jpg)
 Each view (two per row and two per column) will have a certain value, ranging from 1 to 4. Your programme must place the boxes correctly, taking care not to have more than one box of each height on each line and column. Not to have more than one box of each height on each line and column. Your proposal must contain the first solution you find.
