@@ -70,12 +70,10 @@ int	parsing(int views[][N], char *p)
 		while (*p != '\0' && j < N)
 		{
 			views[i][j] = *p - 48;
-			//printf("%c ",views[i][j]+48);
 			j++;
 			p = p + 2;
 			counter++;
 		}
-		//printf("\n");
 		i++;
 	}
 	if (counter != (N * N))
